@@ -1,14 +1,10 @@
-import static java.lang.StrictMath.round;
-
 public class Converter {
 
-    public void distanceCalculation(int steps){
-        double distance = steps * 75;
-        System.out.println("Пройденная дистанция составляет " + Math.round(distance/100000) + " км");
+    public int distanceCalculation(int steps){
+        return steps * 75/100000;
     }
 
-    public void caloriesCalculation(int steps){
-        double calories = steps * 50;
-        System.out.println("Вы сожгли " + Math.round(calories/1000) + " килокалорий");
+    public int caloriesCalculation(int steps){
+        return steps * 50/1000;
     }
 }

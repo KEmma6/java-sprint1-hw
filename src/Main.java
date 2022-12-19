@@ -20,8 +20,10 @@ public class Main {
                 int monthNumber = scanner.nextInt();
                 stepTracker.countingStatistic(monthNumber);
             } else if (userInput == 3) {
-                stepTracker.changeGoal();
-            } else  {
+                System.out.println("Укажите желаемую цель");
+                int goal = scanner.nextInt();
+                stepTracker.changeGoal(goal);
+            } else {
                 System.out.println("Вы ввели неверное значение! Попробуйте еще раз.");
             }
             printMenu();
