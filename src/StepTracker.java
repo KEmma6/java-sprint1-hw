@@ -68,12 +68,8 @@ public class StepTracker {
     }
 
     public void changeGoal(int goal) {
-        if (goal > 0) {
-            goalsOfSteps = goal;
-            System.out.println("Теперь цель за день " + goalsOfSteps + " шагов");
-        } else {
-            System.out.println("Цель не может быть меньше 0");
-        }
+        goalsOfSteps = goal;
+        System.out.println("Теперь цель за день " + goalsOfSteps + " шагов");
     }
 
     public void printAllSteps(int month) {

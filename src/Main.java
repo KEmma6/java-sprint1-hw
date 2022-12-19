@@ -18,10 +18,18 @@ public class Main {
             } else if (userInput == 2) {
                 System.out.println("Укажите номер месяца");
                 int monthNumber = scanner.nextInt();
+                while (monthNumber < 0 || monthNumber > 11) {
+                    System.out.println("Неверный номер месяца. Укажите номер месяца еще раз");
+                    monthNumber = scanner.nextInt();
+                }
                 stepTracker.countingStatistic(monthNumber);
             } else if (userInput == 3) {
                 System.out.println("Укажите желаемую цель");
                 int goal = scanner.nextInt();
+                while (goal < 0) {
+                    System.out.println("Желаемая цель не может быть меньше 0. Укажите желаемую цель еще раз");
+                    goal = scanner.nextInt();
+                }
                 stepTracker.changeGoal(goal);
             } else {
                 System.out.println("Вы ввели неверное значение! Попробуйте еще раз.");
@@ -31,7 +39,6 @@ public class Main {
         }
         System.out.println("Программа завершена");
     }
-
 
     private static void printMenu() {
         System.out.println("Для ввода количества шагов нажмите - 1");
