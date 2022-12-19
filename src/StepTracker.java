@@ -9,6 +9,8 @@ public class StepTracker {
     Converter converter = new Converter();
 
     public void saveSteps() {
+        /*я бы не хотела выносить работу с scanner конкретно из этого метода, чтобы не ломать логику с проверкой
+        ввода месяца, дня и количества шагов*/
         while (true) {
             System.out.println("Укажите номер месяца. Номера месяцев начинаются с 0");
             int monthNumber = scanner.nextInt();
